@@ -1,0 +1,74 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+}
+
+#wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+#text {
+  cursor: default;
+  width: 100%;
+  font-family: "Open Sans";
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  color: #eee;
+  z-index: 3;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 100%; height: 100%; font-weight: bold; text-align: center;
+  margin-top: 2px;
+}
+
+#wrapper .container {
+  position: absolute;
+  left: calc(50vw - 4px - 350px / 2);
+  top: calc(50vh + 290px - 10px / 2);
+  height: 43px;
+  width: 350px;
+  background-color: rgba(58,58,58, 0.5);
+}
+
+
+#wrapper .container .bar {
+	background-color: #3377a4;
+	background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.15)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.15)), color-stop(0.75, rgba(255, 255, 255, 0.15)), color-stop(0.75, transparent), to(transparent));
+	background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -ms-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: -o-linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+	-webkit-background-size: 40px 40px;
+	-moz-background-size: 40px 40px;
+	-o-background-size: 40px 40px;
+	background-size: 40px 40px;
+	-webkit-animation: progress-bar-stripes 2s linear infinite;
+  -moz-animation: progress-bar-stripes 2s linear infinite;
+  animation: progress-bar-stripes 2s linear infinite;
+  margin: 3px 0 0 3px;
+  height: 37.2px;
+  width: 4px;
+}
+
+@-webkit-keyframes progress-bar-stripes {
+    from { background-position: 0 0 }
+
+    to { background-position: 40px 0 }
+}
+
+@-moz-keyframes progress-bar-stripes {
+    from { background-position: 0 0 }
+
+    to { background-position: 40px 0 }
+}
+
+@keyframes progress-bar-stripes {
+    from { background-position: 0 0 }
+
+    to { background-position: 40px 0 }
+}
