@@ -2,38 +2,48 @@
 
 ┌≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈┐
 │                                                       │
-│  # SWRP	                                        │
+│  # SWRP	                                        			│
 │                                                       │
 │                                                       │
-│  Basic progress bar		                        │
+│  Basic progress bar		                        				│
 │                                                       │
 │                                                       │
-│  @ Made by Poggu	                                │
-|  Contact (discord) : Poggu#5993			|
+│  @ Made by Poggu	                                		│
+│  Contact (discord) : Poggu#5993												│
 │                                                       │
 └≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈┘
 
 ]]--
 
-function drawBar(time, text)
+function drawBar(time, text, cb)
 	SendNUIMessage({
 		time = time,
-		text = text
+		text = text,
 	})
+	if cb then
+		Citizen.SetTimeout(time + 100, cb)
+	end
 end
 
 RegisterNetEvent('pogressBar:drawBar')
-AddEventHandler('pogressBar:drawBar', function(time, text)
-	drawBar(time, text)
+AddEventHandler('pogressBar:drawBar', function(time, text, cb)
+	drawBar(time, text, cb)
 end)
 
-
 --[[
-Example
+
+Examples
 
 Citizen.CreateThread(function()
-	Citizen.Wait(1000)
-	drawBar(15000, 'FeelsGoodMan')
+
+	drawBar(5000, 'FeelsGoodMan', function()
+		print('callback Test')
+	end)
+
+
+	TriggerEvent('pogressBar:drawBar', 1000, 'test', function()
+		print('callback Test')
+	end)
 end)
 
 ]]--
