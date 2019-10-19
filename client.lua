@@ -2,14 +2,14 @@
 
 ┌≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈┐
 │                                                       │
-│  # SWRP	                                        			│
+│  # SWRP                                               │
 │                                                       │
 │                                                       │
-│  Basic progress bar		                        				│
+│  Basic progress bar                                   │
 │                                                       │
 │                                                       │
-│  @ Made by Poggu	                                		│
-│  Contact (discord) : Poggu#5993												│
+│  @ Made by Poggu                                      │
+│  Contact (discord) : Poggu#5993                       │
 │                                                       │
 └≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈┘
 
