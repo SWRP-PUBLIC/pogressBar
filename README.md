@@ -12,5 +12,18 @@ TriggerEvent('pogressBar:drawBar', 3000, 'Hello world!')
 
 ```
 
+Callbacks
+```lua
+exports['pogressBar']:drawBar(3000, 'Hello world!', function()
+  print('callback Test')
+end)
+```
+
+Without callbacks
+```lua
+  TriggerClientEvent('pogressBar:drawBar', source, 3000, 'Hello world!')
+  Citizen.Wait(3000)
+  print('callback Test')
+```
 
 https://forum.fivem.net/t/release-pogress-bar-progress-bar-standalone-smooth-animation/838951/1
