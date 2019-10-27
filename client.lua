@@ -58,6 +58,16 @@ Citizen.CreateThread(function()
 	TriggerEvent('pogressBar:drawBar', 1000, 'test', function()
 		print('callback Test')
 	end)
+
+	drawBar(500, 'Hello world!', function()
+		print('callback Test')
+	end, {
+		color = 'blue',
+		customCSS = {
+			maxWidth = "5px"
+		}
+	})
+
 end)
 
 ]]--
