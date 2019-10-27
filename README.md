@@ -26,4 +26,16 @@ Citizen.Wait(3000)
 print('callback Test')
 ```
 
+Custom colors & CSS (Optional)
+```lua
+drawBar(500, 'Hello world!', function()
+  print('callback Test')
+end, {
+  color = 'blue',
+  customCSS = {
+    maxWidth = "5px"
+  }
+})
+```
+
 https://forum.fivem.net/t/release-pogress-bar-progress-bar-standalone-smooth-animation/838951/1
