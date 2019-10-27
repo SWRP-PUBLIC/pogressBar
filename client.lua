@@ -15,10 +15,11 @@
 
 ]]--
 
-function drawBar(time, text, cb)
+function drawBar(time, text, cb, options)
 	SendNUIMessage({
 		time = time,
 		text = text,
+		options = options
 	})
 	if cb then
 		Citizen.SetTimeout(time + 100, cb)
@@ -26,8 +27,8 @@ function drawBar(time, text, cb)
 end
 
 RegisterNetEvent('pogressBar:drawBar')
-AddEventHandler('pogressBar:drawBar', function(time, text, cb)
-	drawBar(time, text, cb)
+AddEventHandler('pogressBar:drawBar', function(time, text, cb, options)
+	drawBar(time, text, cb, options)
 end)
 
 --[[
@@ -44,6 +45,16 @@ Citizen.CreateThread(function()
 	TriggerEvent('pogressBar:drawBar', 1000, 'test', function()
 		print('callback Test')
 	end)
+
+	drawBar(500, 'Hello world!', function()
+		print('callback Test')
+	end, {
+		color = 'blue',
+		customCSS = {
+			maxWidth = "5px"
+		}
+	})
+
 end)
 
 ]]--
