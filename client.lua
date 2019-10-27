@@ -30,19 +30,6 @@ RegisterNetEvent('pogressBar:drawBar')
 AddEventHandler('pogressBar:drawBar', function(time, text, cb, options)
 	drawBar(time, text, cb, options)
 end)
-Citizen.CreateThread(function()
-	Citizen.Wait(1000)
-	drawBar(500, 'FeelsGoodMan', function()
-		print('callback Test')
-	end, {
-		color = 'green'
-	})
-	Citizen.Wait(1000)
-	drawBar(500, 'fdsfs', function()
-		print('callback Test')
-	end)
-end)
-
 
 --[[
 
